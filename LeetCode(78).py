@@ -12,10 +12,11 @@ Output: [[],[0]]'''
 
 class Solution(object):
     def subsets(self, nums):
-        re = []
+        r = []
         def df(index, path):
-            re.append(path)
+            r.append(path)
             for i in range(index, len(nums)):
                 df(i+1, path+[nums[i]])
-        df(0, [])    
-        return re 
+        df(0, [])
+
+        return r
